@@ -12,14 +12,14 @@ Pixel-tracker used to help track visitors activity on a website
 - Postgres docker container
 
 # How to run tests:
-- `./mvnw clean test`
-- `./mvnw clean integration-test`
+- `mvn clean test`
+- `mvn clean integration-test`
 
 # How to start application
 
-- Build using `./mvnw clean install`
+- Build using `mvn clean install`
 - Start postgres db using `docker-compose up -d`
-- Start application `./mvnw spring-boot:run`
+- Start application `mvn spring-boot:run`
 
 # Use case
 
@@ -33,7 +33,7 @@ Two html pages are provided to register page visits
 ### CommandLine
 Generate report from command line by setting property `report.generate=true`. 
 This will generate a report for page visits last 24hrs
-- `./mvnw spring-boot:run -Dspring-boot.run.arguments="--report.generate=true"`
+- `mvn spring-boot:run -Dspring-boot.run.arguments="--report.generate=true"`
 
 ### Endpoints
 Two endpoints are exposed to create reports for a given time range
